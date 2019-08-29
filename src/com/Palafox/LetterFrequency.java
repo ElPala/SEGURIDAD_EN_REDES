@@ -168,9 +168,11 @@ public class LetterFrequency {
     Scanner scanner;
     scanner = new Scanner(System.in);
     txt =scanner.nextLine();
-    letterFrequency = new LetterFrequency(txt);
+        cifradoCesar = new CifradoCesar(txt);
+        cifradoCesar.decode();
+    //letterFrequency = new LetterFrequency(txt);
     //letterFrequency.analysis();
-    letterFrequency.decode();
+    //letterFrequency.decode();
 
     }
 }
