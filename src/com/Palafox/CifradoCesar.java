@@ -53,15 +53,5 @@ public class CifradoCesar {
 
     }
 
-    public static void main(String[] args) {
 
-        CifradoCesar cifradoCesar;
-        Scanner scanner;
-        String txt;
-
-        scanner = new Scanner(System.in);
-        txt = scanner.nextLine();
-        cifradoCesar = new CifradoCesar(txt);
-        cifradoCesar.decode();
-    }
 }
