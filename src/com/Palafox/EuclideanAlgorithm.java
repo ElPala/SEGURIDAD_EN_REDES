@@ -4,6 +4,9 @@ public class EuclideanAlgorithm
 {
     public BigInteger xeuclid( BigInteger a, BigInteger b )
     {
+        BigInteger mx ,my;
+        mx = a;
+        my =b;
         BigInteger[] x = new BigInteger[2];
         BigInteger[] y = new BigInteger[2];
         BigInteger q, r, xx, yy;
@@ -26,18 +29,28 @@ public class EuclideanAlgorithm
             System.out.println(a +", "+ b);
             x[0] = xx;
             y[0] = yy;
+
+
             sign = -sign;
+            if(sign != 1){
+                System.out.println(" x / "+mx+": -" + x[0] );
+                System.out.println(" y / "+my+": " + y[0] );
+            }else {
+                System.out.println(" x / "+mx+": " + x[0] );
+                System.out.println(" y / "+my+": -" + y[0] );
+            }
         }        // Final computation of the coefficients
         x[0] = x[0].multiply( new BigInteger( String.valueOf( sign ) ) );
         y[0] = y[0].multiply( new BigInteger( String.valueOf( -sign ) ) );
+        System.out.println("/////////////////////////////");
         System.out.println(" x : " + x[0] );
         System.out.println(" y : " + y[0] );
          return a;
     }
     public static void main(String[] args)
     {
-    BigInteger a = new BigInteger("2091");
-    BigInteger b = new BigInteger("4807");
+    BigInteger a = new BigInteger("65537");
+    BigInteger b = new BigInteger("2199052615776");
     EuclideanAlgorithm ea = new EuclideanAlgorithm();
     System.out.println( ea.xeuclid(a,b)   );
     }
