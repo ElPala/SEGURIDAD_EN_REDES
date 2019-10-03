@@ -5,7 +5,7 @@ import java.math.BigInteger;
 public class Phi {
 
     public static void main(String[] args) {
-        BigInteger x = new BigInteger("2199055761527");
+        BigInteger x = new BigInteger("53");
         BigInteger y;
         BigInteger menosuno =  BigInteger.ONE;
         menosuno =  menosuno.negate();

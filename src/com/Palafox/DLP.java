@@ -6,7 +6,8 @@ import java.util.HashMap;
 public class DLP {
     public static void main(String[] args) {
 
-        int pow = 11;
+            int pow = 4; //put your pow here
+
         int x=1;
         int max = 0;
         int counter = 0;
@@ -30,6 +31,7 @@ public class DLP {
                     }else if(counter == max){
                         arrayList.add(a);
                     }
+                    counter++;
                     System.out.printf("} con un total de:" + counter);
                     break;
                 }else {
@@ -40,7 +42,13 @@ public class DLP {
             counter = 0;
             System.out.println();
         }
-        System.out.printf("Elementos validos: " +arrayList);
-
+        System.out.println(arrayList.size()+" elementos validos: " + arrayList);
+        int random = (int) (Math.random()* arrayList.size());
+        x =  arrayList.get(random);
+        System.out.println(x);
+        double a = (int) (Math.log(12375)/Math.log(106));
+        a = Math.pow(a,x);
+        a = a%pow;
+        System.out.println(a);
     }
 }
